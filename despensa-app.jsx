@@ -1,4 +1,25 @@
 import { useState, useMemo, useEffect } from "react";
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBZ9AEIIsOZm6vkvJ4CFpcE62tNHHg4Qrc",
+  authDomain: "mi-despensa2.firebaseapp.com",
+  projectId: "mi-despensa2",
+  storageBucket: "mi-despensa2.firebasestorage.app",
+  messagingSenderId: "426235101213",
+  appId: "1:426235101213:web:ec6797460a7a8e831cc6f4",
+  measurementId: "G-V04RT8KKEH"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 const SAMPLE = [
   { id: 1, name: "Arroz",  quantity: 2, unit: "kg",   category: "Granos",      expiryDate: "2026-07-15", emoji: "🌾" },
